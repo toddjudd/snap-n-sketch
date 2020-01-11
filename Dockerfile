@@ -10,6 +10,9 @@ ENV PATH /app/node_modules/.bin:$PATH
 #install and casche app cependencies
 COPY package.json /app/package.json
 RUN npm install --silent
-RUN npm install react-scripts@3.3.0 -g --silent
+RUN npm install -g --silent react-scripts@3.3.0
+RUN npm install -g serve
 
 COPY build/ /app
+
+CMD "serve -s /app -l 7600"
