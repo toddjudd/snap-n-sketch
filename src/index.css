@@ -7,6 +7,7 @@ body {
   overscroll-behavior: none;
 }
 #root {
+  overscroll-behavior: none;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -18,6 +19,7 @@ body {
 }
 
 #canvas {
+  overscroll-behavior: none;
   flex: auto;
   object-fit: cover;
   /* border: 3px solid black; */

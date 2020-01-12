@@ -32,11 +32,15 @@ class Camera extends Component {
   takePhoto = async e => {
     console.log('take photo');
 
-    let sensor = new OffscreenCanvas(this.view.current.videoWidth, this.view.current.videoHeight);
+    // let sensor = new OffscreenCanvas(this.view.current.videoWidth, this.view.current.videoHeight);
+    let sensor = this.sensor.current
+    sensor.width = this.view.current.videoWidth
+    sensor.height = this.view.current.videoHeight
     sensor.getContext('2d').drawImage(this.view.current, 0, 0);
-    let blob = await sensor.convertToBlob();
-    let dataUrl = await this.readAsDataURLSync(blob);
-    this.props.savePhoto(blob, dataUrl, dataUrl => {
+    // let blob = await sensor.convertToBlob();
+    // let dataUrl = await this.readAsDataURLSync(blob);
+    let dataUrl = sensor.toDataURL()
+    this.props.savePhoto(dataUrl, dataUrl => {
       this.output.current.src = dataUrl;
       this.output.current.classList.add('taken');
       this.props.history.push('/canvas');

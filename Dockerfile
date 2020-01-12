@@ -15,4 +15,4 @@ RUN npm install -g serve
 
 COPY build/ /app
 
-CMD "serve -s /app -l 7600"
+CMD ["serve", "-l","7500", "-s", "/app"]

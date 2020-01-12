@@ -13,8 +13,8 @@ class Router extends Component {
     this.state = { blob: null, photoDataUrl: null, imageDataUrl: null };
   }
 
-  savePhoto = (blob, photoDataUrl, cb) => {
-    this.setState({ blob, photoDataUrl }, () => {
+  savePhoto = (photoDataUrl, cb) => {
+    this.setState({ photoDataUrl }, () => {
       console.log(this.state.photoDataUrl);
       cb(this.state.photoDataUrl);
     });
