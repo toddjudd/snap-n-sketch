@@ -77,6 +77,7 @@ class Canvas extends Component {
   }
 
   touch(e) {
+    e.preventDefault();
     if (e.button === 2) return;
     let clientX = this.state.currentPos[0];
     let clientY = this.state.currentPos[1];
@@ -241,8 +242,8 @@ class Canvas extends Component {
     return (
       <React.Fragment>
         <canvas
-          id='canvas'
-          className='Canvas'
+          id="canvas"
+          className="Canvas"
           ref={this.canvas}
           onTouchStart={e => this.touch(e)}
           onMouseDown={e => this.touch(e)}
