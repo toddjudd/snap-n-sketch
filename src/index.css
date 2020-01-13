@@ -145,8 +145,8 @@ li {
 #view,
 #canvasOut,
 #output {
-  /* transform: scaleX(-1); */
-  /* filter: FlipH; */
+  transform: scaleX(-1);
+  filter: FlipH;
 }
 
 #trigger {
