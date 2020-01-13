@@ -5,6 +5,7 @@ body {
   height: 100%;
   width: 100%;
   overscroll-behavior: none;
+  overflow: hidden;
 }
 #root {
   overscroll-behavior: none;
@@ -15,6 +16,7 @@ body {
   display: flex;
   justify-content: stretch;
   align-items: stretch;
+  overflow: hidden;
   /* background-color: #0f96bf; */
 }
 
@@ -22,6 +24,7 @@ body {
   overscroll-behavior: none;
   flex: auto;
   object-fit: cover;
+  overflow: hidden;
   /* border: 3px solid black; */
 }
 
